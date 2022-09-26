@@ -1,0 +1,6 @@
+PKG_CXXFLAGS = $(SHLIB_OPENMP_CXXFLAGS) -fopenmp
+
+OBJECTS = RcppExports.o code.o util.o
+R_XTRA_CPPFLAGS =  -I$(R_INCLUDE_DIR)
+
+$(SHLIB): $(OBJECTS)
